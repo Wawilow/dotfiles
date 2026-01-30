@@ -43,3 +43,6 @@ cp bash/zshrc ~/.zshrc
 
 echo "Move nvim"
 cp nvim ~/.config/
+
+echo "Move opt stuff"
+sudo cp dot-ssh.sh /opt/
