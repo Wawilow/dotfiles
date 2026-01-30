@@ -29,6 +29,8 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
       sudo systemctl enable --now docker
       sudo groupadd docker
       sudo usermod -aG docker $USER
+      sudo dnf install -y zsh tmux luarocks python3-neovim ripgrep lazygit gdu fd fzf tree-sitter-cli lua lua5.1
+      chsh -s $(which zsh)
     fi
   fi
 else
@@ -42,7 +44,12 @@ cp bash/tmux.conf ~/.tmux.conf
 cp bash/zshrc ~/.zshrc
 
 echo "Move nvim"
-cp nvim ~/.config/
+cp -r nvim ~/.config/
 
 echo "Move opt stuff"
 sudo cp dot-ssh.sh /opt/
+sudo cp dot-ssh.service /etc/systemd/system/
+sudo chmod +x /opt/dot-ssh.sh
+sudo systemctl enable dot-ssh.service
+sudo systemctl start dot-ssh.service
+sudo systemctl status dot-ssh.service
