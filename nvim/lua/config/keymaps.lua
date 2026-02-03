@@ -17,3 +17,6 @@ vim.keymap.set("n", "<leader>f/", LazyVim.pick("live_grep"), { desc = "Grep (Roo
 vim.keymap.del("n", "<leader>/") -- unmap so I could map comment one here
 vim.keymap.set("n", "<leader>/", "gcc", { remap = true, desc = "Toggle Comment" })
 vim.keymap.set("v", "<leader>/", "gc", { remap = true, desc = "Toggle Comment" })
+
+-- reload LSP
+vim.keymap.set("n", "<leader>cR", ":LspRestart<CR>", { desc = "Restart LSP" })
