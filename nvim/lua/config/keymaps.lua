@@ -20,3 +20,21 @@ vim.keymap.set("v", "<leader>/", "gc", { remap = true, desc = "Toggle Comment" }
 
 -- reload LSP
 vim.keymap.set("n", "<leader>cR", ":LspRestart<CR>", { desc = "Restart LSP" })
+
+-- settings for diffview.nvim plugin
+-- vim.keymap.set(
+--   "n",
+--   "<leader>g/",
+--   ":DiffviewOpen<CR>",
+--   { desc = "Show diff on current file", noremap = true, silent = true }
+-- )
+-- vim.keymap.set("n", "<leader>g|", ":DiffviewToggleFiles<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>gd", ":DiffviewOpen<CR>", { desc = "Open Diffview" })
+vim.keymap.set("n", "<leader>gD", ":DiffviewToggleFiles<CR>", { desc = "Toggle Diffview Files" })
+
+vim.api.nvim_create_user_command("DebugKeymaps", function()
+  local gd = vim.fn.maparg("<leader>gd", "n")
+  local gD = vim.fn.maparg("<leader>gD", "n")
+  print("✓ <leader>gd:", gd)
+  print("✓ <leader>gD:", gD)
+end, {})
