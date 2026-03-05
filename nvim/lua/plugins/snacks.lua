@@ -2,10 +2,14 @@ return {
   "folke/snacks.nvim",
   ---@type snacks.Config
   opts = {
+    animate = {
+      enabled = false,
+    },
     explorer = {
       trash = false,
-      replace_netrw = false,
+      replace_netrw = true,
 
+      follow_cwd = true,
       focus = "list",
       ignored = false,
       hidden = true,
@@ -16,12 +20,13 @@ return {
           focus = "list",
           hidden = true,
           ignored = false,
-          -- layout = {
-          --   layout = {
-          --     backdrop = false, -- makes it look less like a "popup"
-          --   },
-          -- },
         },
+      },
+    },
+    styles = {
+      input = {
+        relative = "editor",
+        row = 0,
       },
     },
   },
