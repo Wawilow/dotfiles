@@ -51,7 +51,11 @@ alias c='clear'
 # History suggestion
 # zinit light zsh-users/zsh-autosuggestions
 
-
+# movement keybinds
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+bindkey "^[i" beginning-of-line
+bindkey "^A" end-of-line
 
 # ---------- END OF MINE STUFF ----------
 
