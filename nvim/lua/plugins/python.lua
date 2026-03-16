@@ -4,13 +4,9 @@ return {
     opts = {
       servers = {
         pyright = { enabled = false },
-        python = {
-          analysis = {
-            ignore = { "*" },
-          },
-        },
         basedpyright = {
-          enabled = true,
+          -- enabled = true,
+          enabled = false,
           disableOrganizeImports = true,
           settings = {
             basedpyright = {
@@ -42,6 +38,16 @@ return {
               lint = {
                 ignore = { "F541" },
               },
+              run = "onSave",
+            },
+          },
+        },
+        ty = {
+          -- https://docs.astral.sh/ty/reference/editor-settings/#configuration
+          enabled = true,
+          configuration = {
+            rules = {
+              ["unresolved-reference"] = "warn",
             },
           },
         },
