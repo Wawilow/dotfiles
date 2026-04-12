@@ -48,10 +48,16 @@ return {
           configuration = {
             rules = {
               ["unresolved-reference"] = "warn",
+              ["unresolved-attribute"] = "warn",
             },
           },
         },
       },
     },
+  },
+  {
+    "nemanjamalesija/smart-paste.nvim",
+    event = "VeryLazy",
+    config = true,
   },
 }
