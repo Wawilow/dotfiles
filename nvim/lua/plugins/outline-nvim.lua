@@ -1,3 +1,4 @@
+-- file structure windonw <L> + o
 return {
   "hedyhli/outline.nvim",
   keys = { { "<leader>cs", "<cmd>Outline<cr>", desc = "Toggle Outline" } },

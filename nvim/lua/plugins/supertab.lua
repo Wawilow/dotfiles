@@ -1,3 +1,4 @@
+-- auto completion plugin
 return {
   "saghen/blink.cmp",
   opts = {

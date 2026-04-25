@@ -1,4 +1,4 @@
--- the plugin to show actuve function context
+-- show active function context
 return {
   "nvim-treesitter/nvim-treesitter-context",
   dependencies = { "nvim-treesitter/nvim-treesitter" },

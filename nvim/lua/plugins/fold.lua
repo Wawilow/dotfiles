@@ -1,3 +1,7 @@
+-- plugin that helps fold blocks of code
+-- TODO: this would require some changes...
+-- 1) unfold if search is within the fold
+-- 2) more accurate blocks
 return {
   {
     "kevinhwang91/nvim-ufo",

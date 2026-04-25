@@ -1,3 +1,4 @@
+-- formatter plugin
 return {
   "stevearc/conform.nvim",
   opts = {

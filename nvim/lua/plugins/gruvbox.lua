@@ -1,3 +1,4 @@
+-- just colorschem
 return {
   {
     "xiantang/darcula-dark.nvim",

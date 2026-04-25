@@ -1,3 +1,4 @@
+-- file explorer
 return {
   "folke/snacks.nvim",
   ---@type snacks.Config

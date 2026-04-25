@@ -1,3 +1,4 @@
+-- daily notes plugin :today
 return {
   "VVoruganti/today.nvim",
   lazy = false,
