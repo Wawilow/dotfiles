@@ -25,11 +25,10 @@ if [[ -s "$HOME/.zshrc" ]]; then
   echo ""
 fi
 
-echo "You would have to copy nvim dir manually for now"
-# if [[ -d "$HOME/.config/nvim/" ]]; then
-#   echo "sync nvim"
-#   [[ -d "nvim/" ]] && rm -rf "nvim"
-#   cp -r "$HOME/.config/nvim/" .
-#   echo "success nvim"
-#   echo ""
-# fi
+if [[ -d "$HOME/.config/nvim/" ]]; then
+  echo "sync nvim"
+  [[ -d "nvim/" ]] && rm -rf "nvim"
+  cp -r "$HOME/.config/nvim/" .
+  echo "success nvim"
+  echo ""
+fi
