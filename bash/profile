@@ -46,3 +46,4 @@ fi
 #   eval "$(pyenv init -)"
 # fi
 
+. "$HOME/.cargo/env"
