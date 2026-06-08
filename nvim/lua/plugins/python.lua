@@ -3,6 +3,32 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
+        ruff = {
+          init_options = {
+            settings = {
+              lint = {
+                ignore = { "F541" },
+              },
+              run = "onSave",
+            },
+          },
+        },
+        pyrefly = {
+          enabled = true,
+          configuration = {},
+        },
+        ty = {
+          -- https://docs.astral.sh/ty/reference/editor-settings/#configuration
+          enabled = false,
+          configuration = {
+            rules = {
+              ["unresolved-reference"] = "warn",
+              ["unresolved-attribute"] = "warn",
+            },
+          },
+        },
+
+        -- legacy
         pyright = { enabled = false },
         basedpyright = {
           -- enabled = true,
@@ -29,26 +55,6 @@ return {
                   "**/.git",
                 },
               },
-            },
-          },
-        },
-        ruff = {
-          init_options = {
-            settings = {
-              lint = {
-                ignore = { "F541" },
-              },
-              run = "onSave",
-            },
-          },
-        },
-        ty = {
-          -- https://docs.astral.sh/ty/reference/editor-settings/#configuration
-          enabled = true,
-          configuration = {
-            rules = {
-              ["unresolved-reference"] = "warn",
-              ["unresolved-attribute"] = "warn",
             },
           },
         },

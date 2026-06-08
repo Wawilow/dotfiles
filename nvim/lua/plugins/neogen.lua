@@ -1,3 +1,4 @@
+-- plugin to generate anotations (I don't really use it that much)
 return {
   "danymat/neogen",
   dependencies = LazyVim.has("mini.snippets") and { "mini.snippets" } or {},

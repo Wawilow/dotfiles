@@ -38,4 +38,4 @@ vim.keymap.set("n", "<leader>g/", function()
   end
 end, { desc = "Toggle Diffview", silent = true })
 
-vim.keymap.set("n", "<leader>o", "<cmd>Outline<CR>", { desc = "Toggle Outline" })
+-- vim.keymap.set("n", "<leader>o", "<cmd>Outline<CR>", { desc = "Toggle Outline" })

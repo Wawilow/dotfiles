@@ -1,4 +1,4 @@
--- show active function context
+-- show active function in the top line
 return {
   "nvim-treesitter/nvim-treesitter-context",
   dependencies = { "nvim-treesitter/nvim-treesitter" },
