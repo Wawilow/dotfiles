@@ -48,6 +48,10 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 alias ls='ls --color'
 alias c='clear'
 
+# using pbcopy and pbpaste for copy-paste a file's contents
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
 # History suggestion
 # zinit light zsh-users/zsh-autosuggestions
 
