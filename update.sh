@@ -9,14 +9,6 @@ if [[ -s "$HOME/.tmux.conf" ]]; then
   echo ""
 fi
 
-if [[ -s "$HOME/.profile" ]]; then
-  echo "sync profile"
-  [[ -f "bash/profile" ]] && rm "bash/profile"
-  cp "$HOME/.profile" bash/profile
-  echo "success profile"
-  echo ""
-fi
-
 if [[ -s "$HOME/.zshrc" ]]; then
   echo "sync zshrc"
   [[ -f "bash/zshrc" ]] && rm "bash/zshrc"

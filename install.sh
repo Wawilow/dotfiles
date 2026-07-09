@@ -10,15 +10,6 @@ if [[ -f "bash/tmux.conf" ]]; then
   fi
 fi
 
-if [[ -f "bash/profile" ]]; then
-  read -p "install profile [y/n]? " ans
-  if [[ "$ans" == "y" ]]; then
-    cp bash/profile "$HOME/.profile"
-    echo "success profile"
-    echo ""
-  fi
-fi
-
 if [[ -f "bash/zshrc" ]]; then
   read -p "install zshrc [y/n]? " ans
   if [[ "$ans" == "y" ]]; then

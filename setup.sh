@@ -39,7 +39,6 @@ else
 fi
 
 echo "Move config files in place"
-cp bash/profile ~/.profile
 cp bash/tmux.conf ~/.tmux.conf
 cp bash/zshrc ~/.zshrc
 
