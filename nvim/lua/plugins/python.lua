@@ -4,6 +4,7 @@ return {
     opts = {
       servers = {
         ruff = {
+          offset_encoding = "utf-16",
           init_options = {
             settings = {
               lint = {
@@ -15,6 +16,7 @@ return {
         },
         pyrefly = {
           enabled = true,
+          offset_encoding = "utf-16",
           configuration = {},
         },
         ty = {
