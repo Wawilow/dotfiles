@@ -1,5 +1,6 @@
 #!/bin/bash
-# this script install dotfiles repo to the system
+# repo -> system
+echo "DANGEROUS, IT COULD NUKE YOUR SHIT"
 
 if [[ -f "bash/tmux.conf" ]]; then
   read -p "install tmux conf [y/n]? " ans

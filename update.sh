@@ -1,5 +1,5 @@
 #!/bin/bash
-# this script to quickly sync dotfiles repo with the system
+# system configs -> repo
 
 if [[ -s "$HOME/.tmux.conf" ]]; then
   echo "sync tmux conf"
