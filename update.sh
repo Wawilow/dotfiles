@@ -1,5 +1,6 @@
 #!/bin/bash
-# system configs -> repo
+echo "system configs -> repo"
+sleep 2
 
 if [[ -s "$HOME/.tmux.conf" ]]; then
   echo "sync tmux conf"

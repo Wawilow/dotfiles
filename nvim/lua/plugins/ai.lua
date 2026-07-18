@@ -1,3 +1,7 @@
+-- (\(\
+-- ( -.-)
+-- o_(")(")
+
 local ok, secrets = pcall(require, "secrets")
 local claude_code_oauth_token = ok and secrets.claude_code_oauth_token
 
@@ -81,11 +85,60 @@ return {
     interactions = {
       chat = {
         adapter = "claude_code",
+
+        tools = {
+          ["run_command"] = {
+            opts = {
+              require_approval_before = true,
+              require_cmd_approval = true,
+              allowed_in_yolo_mode = false,
+            },
+          },
+
+          opts = {
+            auto_submit_errors = false,
+            auto_submit_success = false,
+          },
+        },
+
+        keymaps = {
+          send = {
+            modes = { n = "<C-s>", i = "<C-s>" },
+            opts = {},
+          },
+          close = {
+            modes = { n = "<C-c>", i = "<C-c>" },
+            opts = {},
+          },
+        },
+      },
+      shared = {
+        keymaps = {
+          view_diff = {
+            modes = { n = "<C-v>" },
+            opts = {},
+          },
+          accept_change = {
+            modes = { n = "<C-a>" },
+            opts = {},
+          },
+          reject_change = {
+            modes = { n = "<C-r>" },
+            opts = {},
+          },
+          cancel = {
+            modes = { n = "<C-d>" },
+            opts = {},
+          },
+        },
       },
     },
   },
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-treesitter/nvim-treesitter",
+  },
+  keys = {
+    { "<Leader>aa", "<cmd>CodeCompanionChat Toggle<cr>", desc = "CodeCompanion Chat" },
   },
 }

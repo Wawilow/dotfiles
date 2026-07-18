@@ -1,6 +1,7 @@
 #!/bin/bash
 # repo -> system
-echo "DANGEROUS, IT COULD NUKE YOUR SHIT"
+echo "DANGEROUS, it could nuke your local system shit"
+sleep 1
 
 if [[ -f "bash/tmux.conf" ]]; then
   read -p "install tmux conf [y/n]? " ans
