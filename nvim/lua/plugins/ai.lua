@@ -81,6 +81,14 @@ return {
         end,
       },
     },
+    rules = {
+      config_rules = {
+        description = "AI.md rules",
+        files = {
+          "~/.config/nvim/lua/plugins/AI.md",
+        },
+      },
+    },
 
     interactions = {
       chat = {
@@ -110,6 +118,11 @@ return {
             modes = { n = "<C-c>", i = "<C-c>" },
             opts = {},
           },
+        },
+
+        opts = {
+          -- this overrides default config, please be careful
+          system_prompt = "My new system prompt",
         },
       },
       shared = {
