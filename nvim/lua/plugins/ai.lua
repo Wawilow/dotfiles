@@ -5,23 +5,16 @@ return {
   "olimorris/codecompanion.nvim",
   version = "^19.0.0",
   opts = {
+    opts = { log_level = "DEBUG" },
     adapters = {
       acp = {
         -- claude_code = function()
         --   return require("codecompanion.adapters").extend("claude_code", {
         --     env = {
-        --       CLAUDE_CODE_OAUTH_TOKEN = claude_code_oauth_token,
+        --       claude_code_oauth_token = claude_code_oauth_token,
         --     },
         --   })
         -- end,
-      },
-    },
-    rules = {
-      config_rules = {
-        description = "AI.md rules",
-        files = {
-          "~/.config/nvim/lua/plugins/AI.md",
-        },
       },
     },
 
@@ -47,36 +40,31 @@ return {
 
         keymaps = {
           send = {
-            modes = { n = "<C-s>", i = "<C-s>" },
+            modes = { n = "<c-s>", i = "<c-s>" },
             opts = {},
           },
           close = {
-            modes = { n = "<C-c>", i = "<C-c>" },
+            modes = { n = "<c-c>", i = "<c-c>" },
             opts = {},
           },
         },
-
-        -- opts = {
-        --   -- this overrides default config, please be careful
-        --   system_prompt = "My new system prompt",
-        -- },
       },
       shared = {
         keymaps = {
           view_diff = {
-            modes = { n = "<C-v>" },
+            modes = { n = "<c-v>" },
             opts = {},
           },
           accept_change = {
-            modes = { n = "<C-a>" },
+            modes = { n = "<c-a>" },
             opts = {},
           },
           reject_change = {
-            modes = { n = "<C-r>" },
+            modes = { n = "<c-r>" },
             opts = {},
           },
           cancel = {
-            modes = { n = "<C-d>" },
+            modes = { n = "<c-d>" },
             opts = {},
           },
         },
@@ -88,6 +76,6 @@ return {
     "nvim-treesitter/nvim-treesitter",
   },
   keys = {
-    { "<Leader>aa", "<cmd>CodeCompanionChat Toggle<cr>", desc = "CodeCompanion Chat" },
+    { "<leader>aa", "<cmd>CodeCompanionChat Toggle<cr>", desc = "codecompanion chat" },
   },
 }
