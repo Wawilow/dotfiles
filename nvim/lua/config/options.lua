@@ -8,3 +8,9 @@ vim.opt.winbar = "%=%m %f"
 vim.opt.whichwrap:append("<,>,[,],h,l")
 
 vim.opt.fixeol = true
+
+-- wrap line by default and break by full word not symbols
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.breakindent = true
+vim.opt.showbreak = "↳ "

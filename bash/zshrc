@@ -86,3 +86,6 @@ esac
 
 # opencode
 export PATH=/home/user/.opencode/bin:$PATH
+
+# kubectl
+source <(kubectl completion zsh)
