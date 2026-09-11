@@ -1,2 +1,2 @@
 -- plugin to see changes in the file
-return { "sindrets/diffview.nvim" }
+return { "dlyongemallo/diffview-plus.nvim" }
