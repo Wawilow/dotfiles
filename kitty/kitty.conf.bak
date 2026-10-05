@@ -21,17 +21,10 @@ input_delay 0
 
 enable_audio_bell no
 
-# hide the top line, bc i use tmux anyways
-tab_bar_style hidden
-# for my screen 12px is the best scale
-font_size 12.0
-# the regular borders were way too huge, 2px is perfect...
-window_padding_width 2
-
 map ctrl+shift+f send_text all clear\n cd `cdinteractive`\n
 
 
 # BEGIN_KITTY_THEME
-# Cyberpunk
+# Everforest
 include current-theme.conf
 # END_KITTY_THEME
